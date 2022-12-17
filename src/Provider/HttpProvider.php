@@ -57,7 +57,7 @@ class HttpProvider implements HttpProviderInterface
      */
     public function __construct(string $host, int $timeout = 30000,
                                 $user = false, $password = false,
-                                array $headers = [], string $statusPage = '/')
+                                array $headers = ['TRON-PRO-API-KEY'  =>  'Your Api Key'], string $statusPage = '/')
     {
         if(!Utils::isValidUrl($host)) {
             throw new TronException('Invalid URL provided to HttpProvider');
